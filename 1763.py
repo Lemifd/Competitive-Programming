@@ -1,18 +1,19 @@
-class Solution:
-    def longestNiceSubstring(self, s: str) -> str:
-        for letter in s:
-            if letter.islower:
-                if letter.upper() not in s[::]:
-                    return False
-            else:
-                if letter.lower() not in s[::]:
-                    return False
-        return True
+# class Solution:
+#     def longestNiceSubstring(self, s: str) -> str:
+#         rem=""
+#         for letter in s:
+#             if letter.islower:
+#                 if letter.upper() not in s[::]:
+#                    rem=rem+letter
+#             else:
+#                 if letter.lower() not in s[::]:
+#                     rem =rem+letter
+#         return T
             
 
 
 
-s = "YazaAay"
-# Output: "aAa
+# s = "YazaAay"
+# # Output: "aAa
 
-print(Solution().longestNiceSubstring(s))
+# print(Solution().longestNiceSubstring(s))

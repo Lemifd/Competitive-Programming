@@ -1,15 +1,18 @@
 class Solution:
     def isCovered(self, ranges, left: int, right: int):
-        a=[x for x in range(left,right+1)]
-        for i,k in ranges:
-            for i in range(i,k+1):
-                pass
-            if right in range(i,k+1):
-                re=True
-
+        list=[i for i in range(left,right+1)]
+        for i,j in ranges:
+            k=0
+            while k<len(list):
+                if i<=list[k]<=j:list.pop(k)
+                else:k+=1
+            if not list:return True
+        return list
         
-    
 
-nums=[[37,49],[5,17],[8,32]]
+ranges =[[37,49],[5,17],[8,32]]
 
-print(Solution().isCovered(nums,29,49))
+left = 29
+right = 49
+
+print(Solution().isCovered(ranges,left,right))
